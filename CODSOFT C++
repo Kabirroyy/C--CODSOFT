@@ -1,0 +1,44 @@
+//CODSOFT C++ TASK-1
+//Author -Kabir Roy
+//TO BUILD A SIMPLE WORKING CALCULATOR 
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    char op;  // changed variable name from 'operator' to 'op'
+
+    cout << "The first number is:" << endl;
+    cin >> a;
+
+    cout << "The second number is:" << endl;
+    cin >> b;
+
+    cout << "Enter the operator (+, -, *, /):" << endl;
+    cin >> op;
+
+    switch(op) {
+        case '+':
+            cout << "The sum is " << a + b << endl;
+            break;
+        case '-':
+            cout << "The difference is " << a - b << endl;
+            break;
+        case '*':
+            cout << "The product is " << a * b << endl;
+            break;
+        case '/':
+            if (b != 0) {
+                cout << "The quotient is " << a / b << endl;
+            } else {
+                cout << "Error: Division by zero" << endl;
+            }
+            break;
+        
+        default:
+            cout << "INVALID operator" << endl;
+    }
+
+    return 0;
+}
